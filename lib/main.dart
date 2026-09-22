@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations/pages/implicit_animated_container_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Animation Learning',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const HomePage(),
     );
@@ -31,6 +33,18 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: [
                   //* Buttons for animations
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const ImplicitAnimatedContainerPage(),
+                        ),
+                      );
+                    },
+                    child: const Text('Implicit Animated Container'),
+                  ),
                 ],
               ),
             ),
