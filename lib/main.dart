@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations/pages/animation_controller_page.dart';
 import 'package:flutter_animations/pages/implicit_animated_container_page.dart';
 
 void main() {
@@ -33,6 +34,7 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: [
                   //* Buttons for animations
+                  //! Implicit Animation Controller
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -44,6 +46,19 @@ class HomePage extends StatelessWidget {
                       );
                     },
                     child: const Text('Implicit Animated Container'),
+                  ),
+                  const SizedBox(height: 10),
+                  //! Animation Controller
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const AnimationControllerPage(),
+                        ),
+                      );
+                    },
+                    child: const Text('Animation Controller'),
                   ),
                 ],
               ),
