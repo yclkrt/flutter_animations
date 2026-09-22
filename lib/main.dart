@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: [
                   //* Buttons for animations
-                  //! Implicit Animation Controller
+                  //? Implicit Animation Controller
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                     child: const Text('Implicit Animated Container'),
                   ),
                   const SizedBox(height: 10),
-                  //! Animation Controller
+                  //? Animation Controller
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(

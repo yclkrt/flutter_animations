@@ -27,7 +27,8 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
 
   @override
   void dispose() {
-    _controller.dispose(); // Çok Önemli !!!
+    _controller
+        .dispose(); // Çok Önemli !!! (yapılmaz ise bellek sızıntısı olur.)
     super.dispose();
   }
 
